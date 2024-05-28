@@ -25,7 +25,7 @@ const VendingMachine: React.FC = () => {
     }, [message,item,balance,status]);
 
     return (
-        <div>
+        <div className="w-2/3 h-auto mb-6">
             <h1 className="text-[48px] font-bold">Welcome to the Vending Machine</h1>
             <div className="balance">
                 <h2 className="text-[28px]">Your Balance: ${balance.toFixed(2)}</h2>
@@ -43,7 +43,7 @@ const VendingMachine: React.FC = () => {
             </Card>
             <Card className="items-code-section p-6 flex justify-center flex-col items-center">
                 <div className="flex items-center justify-center">
-                    <InputOTP maxLength={4} value={value} onChange={(value) => setValue(value)}>
+                    <InputOTP maxLength={4} value={value} onChange={(value:any) => setValue(value)}>
                         <InputOTPGroup>
                             <InputOTPSlot index={0}/>
                             <InputOTPSlot index={1}/>
